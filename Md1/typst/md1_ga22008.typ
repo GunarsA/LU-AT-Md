@@ -146,6 +146,8 @@ table(
 align(center,image("./Acceptor.jpeg", height: 20%))
 )
 
+#pagebreak()
+1. uzdevuma kods
 #box(width: 100%, fill: rgb("#FFFFFF"), inset: 10pt, stroke: (paint: rgb("#000000"), thickness: 0.1pt),
     text(8pt,
 ```cpp
@@ -222,10 +224,13 @@ int main()
 }
     ```))
 
+
+#pagebreak()
+3. uzdevuma kods
 #box(width: 100%, fill: rgb("#FFFFFF"), inset: 10pt, stroke: (paint: rgb("#000000"), thickness: 0.1pt),
     text(8pt,
     ```cpp
-    #include <iostream>
+#include <iostream>
 
 #define I 2 % 2
 #define J 0 % 2
