@@ -40,18 +40,22 @@
 
 = 1. uzdevums
 == (a) apakšuzdevums
+Ievade: 110010010000111111011
+
 Izvade: 001001001000010010001
 == (b) apakšuzdevums
 Atrastā ievade: 000100100000110110110
 
-Atrastā Izvade: 100010010000011011011
+Atrastā izvade: 100010010000011011011
+
+Meklētā izvade: 110010010000111111011
 
 Heminga attālums: 3
 
 = 2. uzdevums
 Transformators (Q, X, Y, f, g, q#sub[0]) ir definēts sekojoši:
 
-Q = {s_1, s_2, s_3, s_4, s_5, s_6, s_7, s_8, s_9, s_10, s_11, s_12}
+Q = {s_1, s_2, s_3, s_4, s_5, s_6, s_7, s_8, s_9}
 
 X = {0, 1}
 
@@ -60,27 +64,30 @@ Y = {0, 1, 2}
 q#sub[0] = s_1
 
 Funkcijas f un g ir dotas ar tabulu:
-#table(
-    columns: (auto, auto, auto, auto),
-    [Stāvoklis q], [Ieeja x], [f(q,x)], [g(q,x)],
-    [s_1], [0], [s_2], [0],
-    [s_1], [1], [s_1], [0],
-    [s_2], [0], [s_3], [0],
-    [s_2], [1], [s_1], [0],
-    [s_3], [0], [s_6], [1],
-    [s_3], [1], [s_1], [0],
-    [s_4], [0], [s_5], [1],
-    [s_4], [1], [s_4], [1],
-    [s_5], [0], [s_6], [1],
-    [s_5], [1], [s_4], [1],
-    [s_6], [0], [s_9], [2],
-    [s_6], [1], [s_4], [1],
-    [s_7], [0], [s_8], [2],
-    [s_7], [1], [s_7], [2],
-    [s_8], [0], [s_9], [2],
-    [s_8], [1], [s_7], [2],
-    [s_9], [0], [s_3], [0],
-    [s_9], [1], [s_7], [2],
+#grid(columns:2, gutter: 40pt,
+    table(
+        columns: (auto, auto, auto, auto),
+        [Stāvoklis q], [Ieeja x], [f(q,x)], [g(q,x)],
+        [s_1], [0], [s_2], [0],
+        [s_1], [1], [s_1], [0],
+        [s_2], [0], [s_3], [0],
+        [s_2], [1], [s_1], [0],
+        [s_3], [0], [s_6], [1],
+        [s_3], [1], [s_1], [0],
+        [s_4], [0], [s_5], [1],
+        [s_4], [1], [s_4], [1],
+        [s_5], [0], [s_6], [1],
+        [s_5], [1], [s_4], [1],
+        [s_6], [0], [s_9], [2],
+        [s_6], [1], [s_4], [1],
+        [s_7], [0], [s_8], [2],
+        [s_7], [1], [s_7], [2],
+        [s_8], [0], [s_9], [2],
+        [s_8], [1], [s_7], [2],
+        [s_9], [0], [s_3], [0],
+        [s_9], [1], [s_7], [2],
+    ),
+    align(center,image("./Transformer.jpeg", height: 30%))
 )
 
 = 3. uzdevums
@@ -125,7 +132,8 @@ Q#sub[A] = {s_2}
 q#sub[0] = s_1
 
 Funkcija f ir dota ar tabulu:
-#table(
+#grid(columns:2, gutter: 40pt,
+table(
     columns: (auto, auto, auto),
     [Stāvoklis q], [Ieeja x], [f(q,x)],
     [s_1], [0], [s_2],
@@ -134,6 +142,8 @@ Funkcija f ir dota ar tabulu:
     [s_2], [1], [s_1],
     [s_3], [0], [s_3],
     [s_3], [1], [s_3],
+),
+align(center,image("./Acceptor.jpeg", height: 20%))
 )
 
 #box(width: 100%, fill: rgb("#FFFFFF"), inset: 10pt, stroke: (paint: rgb("#000000"), thickness: 0.1pt),
