@@ -32,7 +32,7 @@
 #show: project.with(
   title: "Automātu teorija - 1. mājas darbs",
   authors: (
-    "Gunārs Ābeltiņš",
+    "Gunārs Ābeltiņš, ga22008",
   ),
   date: "2023-10-30",
 )
@@ -53,7 +53,7 @@ Meklētā izvade: 110010010000111111011
 Heminga attālums: 3
 
 = 2. uzdevums
-Transformators (Q, X, Y, f, g, q#sub[0]) ir definēts sekojoši:
+Transformators (Q, X, Y, f, g, q#sub[0]), kas izvada virknes "000" skaitu pēc moduļa 3, ir definēts sekojoši:
 
 Q = {s_1, s_2, s_3, s_4, s_5, s_6, s_7, s_8, s_9}
 
@@ -116,10 +116,13 @@ Valoda ir 21 vārds ar garumu <= 5:
 11111
 
 == (b) apakšuzdevums
-$(1 #sym.or (01 #sym.ast.basic (0 #sym.or 1)))
+Regulārā izteiksme: $(1 #sym.or (01 #sym.ast.basic (0 #sym.or 1)))
 ((0 #sym.or 1)(1 #sym.or (01 #sym.ast.basic 0(0 #sym.or 1)))) #sym.ast.basic$
 
 = 4. uzdevums
+
+Regulārā izteiksme: $0( #sym.epsilon #sym.or 0 #sym.or 10 #sym.or 00) #sym.ast.basic =
+0(0 #sym.or 10) #sym.ast.basic $
 
 Akceptors (Q, X, f, Q#sub[A], q#sub[0]) ir definēts sekojoši:
 
