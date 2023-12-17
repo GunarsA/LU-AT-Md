@@ -33,6 +33,15 @@ TRANSITION_MATRIX = {
 
 
 def probabilistic_automaton(str: str) -> bool:
+    """
+    Accepts only string that contains 3 a's and 14 b's.
+
+    Args:
+        str (str): The input string to be checked.
+
+    Returns:
+        bool: True if the string is accepted, False otherwise.
+    """
     state_probabilities = np.zeros(len(STATES))
     state_probabilities[STATES.index(START_STATE)] = 1
 
