@@ -1,6 +1,7 @@
 import numpy as np
 
 I, J, K, M, = 2, 0, 0, 8
+# I, J, K, M, = 2, 0, 3, 3
 
 STATES = ["s_0", "s_1"]
 INPUT_ALPHABET = ["a", "b"]
@@ -44,5 +45,6 @@ if __name__ == "__main__":
             if probabilistic_automaton(word):
                 words.append(word)
 
-    print(f"Words accepted by the probabilistic automaton ({
-          len(words)}): ", words)
+    print(f"Words accepted by the probabilistic automaton ({len(words)}): ")
+    for word in words:
+        print(f"{word if word != "" else "ε"}, ", end="")

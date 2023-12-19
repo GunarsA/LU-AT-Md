@@ -1,10 +1,10 @@
 import numpy as np
 
-state_probabilities = np.array([1, 0, 0])
+state_probabilities = np.array([0.5, 0, 0])
 state_transition_matrix_a = np.array([[0.9, 0.1, 0], [0, 0.5, 0.5], [0, 0, 1]])
 state_transition_matrix_b = np.array([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
 
-str = "aaaaaaaaaaaaaa"
+str = "aaaa"
 
 for i in range(len(str)):
     if str[i] == "a":

@@ -1,0 +1,2 @@
+Visi valodas vārdi garuma <= 4 (11):
+ε, aa, ba, aba, bba, aaaa, aaba, abba, baaa, baba, bbba

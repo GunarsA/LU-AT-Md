@@ -1,4 +1,5 @@
 I, J, K, M, = 2, 0, 0, 8
+# I, J, K, M, = 2, 0, 3, 3
 
 STATES = ["s_0", "s_1", "s_2"]
 INPUT_ALPHABET = ["0", "1"]
@@ -46,4 +47,6 @@ if __name__ == "__main__":
             if pushdown_automaton(word, START_STATE, START_STACK_SYMBOL):
                 words.append(word)
 
-    print(f"Words accepted by the PDA ({len(words)}): ", words)
+    print(f"Words accepted by the PDA ({len(words)}): ")
+    for word in words:
+        print(f"{word if word != "" else "ε"}, ", end="")
