@@ -10,18 +10,20 @@ B_FIRST, B_SECOND = 0.91, 0.95
 
 TRANSITION_MATRIX = {
     "a": np.array([
-        [A_FIRST, 1 - A_FIRST, 0, 0, 0, 0],
+        [0, 0.5 * A_FIRST, 0.5 * (1 - A_FIRST), 0.5, 0, 0],
+        [0, A_FIRST, 1 - A_FIRST, 0, 0, 0],
+        [0, 0, A_SECOND, 0, 0, 1 - A_SECOND],
+        [0, 0, 0, 1, 0, 0],
+        [0, 0, 0, 0, 1, 0],
+        [0, 0, 0, 0, 0, 1]
     ]),
     "b": np.array([
-        [FIRST, 1 - FIRST, 0, 0, 0, 0, 0, 0, 0],
-        [0, SECOND, 0, 0, 0, 0, 0, 0, 1 - SECOND],
-        [0, 0, FIRST, 1 - FIRST, 0, 0, 0, 0, 0],
-        [0, 0, 0, SECOND, 0, 0, 0, 0, 1 - SECOND],
-        [0, 0, 0, 0, FIRST, 1 - FIRST, 0, 0, 0],
-        [0, 0, 0, 0, 0, SECOND, 0, 0, 1 - SECOND],
-        [0, 0, 0, 0, 0, 0, FIRST, 1 - FIRST, 0],
-        [0, 0, 0, 0, 0, 0, 0, SECOND, 1 - SECOND],
-        [0, 0, 0, 0, 0, 0, 0, 0, 1]
+        [0, 0.5, 0, 0.5 * B_FIRST, 0.5 * (1 - B_FIRST), 0],
+        [0, 1, 0, 0, 0, 0],
+        [0, 0, 1, 0, 0, 0],
+        [0, 0, 0, B_FIRST, 1 - B_FIRST, 0],
+        [0, 0, 0, 0, B_SECOND, 1 - B_SECOND],
+        [0, 0, 0, 0, 0, 1]
     ])
 }
 
@@ -42,13 +44,16 @@ def probabilistic_automaton(str: str) -> bool:
     for i in range(len(str)):
         state_probabilities = np.dot(
             state_probabilities, TRANSITION_MATRIX[str[i]])
+        # for j in range(len(state_probabilities)):
+        #     print(f"{state_probabilities[j]:.4f}", end=" ")
+        # print()
 
     for j in range(len(state_probabilities)):
         print(f"{state_probabilities[j]:.4f}", end=" ")
     print()
 
     # return if sum of accepting states is greater than lambda
-    
+
     return sum(state_probabilities[STATES.index(state)] for state in ACCEPTING_STATES) >= LAMBDA
 
 

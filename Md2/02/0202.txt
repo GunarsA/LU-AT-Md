@@ -1,0 +1,22 @@
+Nē, šī valoda nav regulāra, jo neatbilst pumpēšanas lemmas nosacījumam regulārām valodām.
+
+Lai kāds būtu naturāls skaitlis p, vārds (0)^(p+2)(10)^(p) pieder valodai,
+jo tas satur p apakšvirknes 000, bet p - 1 apakšvirkni 010.
+
+Lai izpildītos pumpēšanas lemmas nosacījums |xy| <= p, x un y var saturēt tikai 0,
+un, lai izpilditos nosacījums |y| > 0, y satūrēs vismaz vienu 0. 
+Tātad: 
+    x = (0)^(p - n - m)
+    y = (0)^(n)
+    z = (0)^(m)00(10)^(p)
+    kur n > 0 un m > 0
+
+Lai izpildītos pumpēšanas lemmas nosacijums priekš visiem i, kur i ∈ [0, +bezgaliba), x(y)^(i)z japieder valodai.
+No ši izriet:
+    Virkņu 000 skaits: no p - n lidz +bezgalibai
+    Virkņu 010 skaits: p - 1
+
+Tā kā n jābut vismaz 1, tad pie jebkuras x, y, z izvēles var izvēlēties tādu i (i = 0),
+ka virkņu 000 skaits būs vienāds ar 010 virkņu skaitu, kas nozīmē, ka vārds nepieder valodai.
+
+Tātad šī valoda nav regulāra.

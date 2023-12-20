@@ -10,17 +10,17 @@ Akceptors ar magazīna tipa atmiņu (Q, X, S, δ, q0, $, QA) ir definēts sekojo
    Stāvoklis q    Ieeja x    Simbols no steka    Mērķstāvoklis    Virkne uz steku
     s_0              0              ε              s_1                    ε
     s_1              0              ε              s_3                    ε
-    s_1              0              ε              s_2                    ε
+    s_1              1              ε              s_2                    ε
     s_2              0              ε              s_1                    z
     s_2              1              ε              s_0                    ε
     s_3              0              z              s_3                    ε
-    s_3              0              $              s_3                   z$
+    s_3              0              $              s_7                   z$
     s_3              1              ε              s_2                    ε
     s_4              0              ε              s_5                    ε
     s_5              0              ε              s_7                    ε
     s_5              1              ε              s_6                    ε
     s_6              0              zz             s_5                    z
-    s_6              0              z$             s_2                    $
+    s_6              0              z$             s_1                    $
     s_6              1              ε              s_4                    ε
     s_7              0              ε              s_7                    z
     s_7              1              ε              s_6                    ε
