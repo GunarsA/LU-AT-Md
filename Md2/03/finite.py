@@ -19,8 +19,6 @@ def finite_state_machine(str: str) -> bool:
     for i in range(len(str)):
         current_state = TRANSITION_FUNCTION[(current_state, str[i])]
 
-    # print(f"Word: {str}, State: {current_state}", current_state in ACCEPTING_STATES)
-
     return current_state in ACCEPTING_STATES
 
 

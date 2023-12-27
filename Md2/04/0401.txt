@@ -1,0 +1,22 @@
+Varbūtiskais akceptors (Q, X, p, q0, QA, λ) ir definēts sekojoši:
+    stāvokļu kopa:                           Q = {s_0, s_1, s_2, s_3, s_4, s_5}
+    ieejas alfabēts                          X = {a, b}
+    sākumstāvoklis:                          q0 = s_0  
+    akceptējošo stāvokļu kopa:               QA = {s_2, s_4}
+    akceptēšanas slieksnis:                  λ = 0.0755 + 0.2482 = 0.3237
+    Pārejas funkcija δ ir dota ar tabulu:
+    Stāvoklis q    Ieeja x    Mērķstāvoklis q’   Varbūtība p(q,x,q’)
+        s_0            a             s_1                 0.45
+        s_0            a             s_2                 0.05
+        s_0            a             s_3                 0.5
+        s_0            b             s_1                 0.5
+        s_0            b             s_4                 0.455
+        s_0            b             s_5                 0.045
+        s_1            a             s_1                 0.9
+        s_1            a             s_2                 0.1
+        s_2            a             s_2                 0.5
+        s_2            a             s_5                 0.5
+        s_3            b             s_3                 0.91
+        s_3            b             s_4                 0.09
+        s_4            b             s_4                 0.95
+        s_4            b             s_5                 0.05

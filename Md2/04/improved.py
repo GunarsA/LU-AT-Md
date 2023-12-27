@@ -86,3 +86,7 @@ if __name__ == "__main__":
         assert probabilistic_automaton(word) == result
 
     print("All tests passed!")
+
+    print(TRANSITION_MATRIX["a"])
+
+    print(TRANSITION_MATRIX["b"])

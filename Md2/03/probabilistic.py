@@ -1,7 +1,6 @@
 import numpy as np
 
 I, J, K, M, = 2, 0, 0, 8
-# I, J, K, M, = 2, 0, 3, 3
 
 STATES = ["s_0", "s_1"]
 INPUT_ALPHABET = ["a", "b"]
@@ -27,11 +26,6 @@ def probabilistic_automaton(str: str) -> bool:
     for i in range(len(str)):
         state_probabilities = np.dot(
             state_probabilities, TRANSITION_MATRIX[str[i]])
-
-    # print(f"Word: {str}")
-    # for j in range(len(state_probabilities)):
-    #     print(f"{state_probabilities[j]:.4f}", end=" ")
-    # print()
 
     return state_probabilities[STATES.index(ACCEPTING_STATES[0])] >= LAMBDA
 

@@ -1,26 +1,27 @@
 Akceptors ar magazīna tipa atmiņu (Q, X, S, δ, q0, $, QA) ir definēts sekojoši:
-   stāvokļu kopa:                           Q = {s_0, s_1, s_2, s_3, s_4, s_5, s_6, s_7}
+   stāvokļu kopa:                           Q = {s_0, s_1, s_2, s_3, s_4, s_5}
    ieejas alfabēts                          X = {0, 1}
-   steka alfabēts:                          S = {z, $}
+   steka alfabēts:                          S = {0, 1, Z}
    sākumstāvoklis:                          q0 = s_0  
-   steka beigas simbols:                    $
-   akceptējošo stāvokļu kopa:               QA = {s_4, s_5, s_6, s_7}
+   steka beigas simbols:                    Z
+   akceptējošo stāvokļu kopa:               QA = {s_4}
    Pārejas funkcija δ ir dota ar tabulu:
 
    Stāvoklis q    Ieeja x    Simbols no steka    Mērķstāvoklis    Virkne uz steku
+    s_0              ε              0              s_4                    ε
     s_0              0              ε              s_1                    ε
-    s_1              0              ε              s_3                    ε
-    s_1              1              ε              s_2                    ε
-    s_2              0              ε              s_1                    z
+    s_0              1              ε              s_0                    ε
+    s_1              ε              0              s_4                    ε
+    s_1              0              ε              s_2                    ε
+    s_1              1              ε              s_3                    ε
+    s_2              ε              0              s_4                    ε
+    s_2              0              Z              s_1                   1Z
+    s_2              0              0              s_1                    ε
+    s_2              0              1              s_1                   11
     s_2              1              ε              s_0                    ε
-    s_3              0              z              s_3                    ε
-    s_3              0              $              s_7                   z$
+    s_3              ε              0              s_4                    ε
+    s_3              0              Z              s_3                   0Z
+    s_3              0              0              s_3                   00
+    s_3              0              1              s_3                    ε
     s_3              1              ε              s_2                    ε
-    s_4              0              ε              s_5                    ε
-    s_5              0              ε              s_7                    ε
-    s_5              1              ε              s_6                    ε
-    s_6              0              zz             s_5                    z
-    s_6              0              z$             s_1                    $
-    s_6              1              ε              s_4                    ε
-    s_7              0              ε              s_7                    z
-    s_7              1              ε              s_6                    ε
+    
