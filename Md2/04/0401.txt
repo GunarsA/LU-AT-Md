@@ -14,9 +14,15 @@ Varbūtiskais akceptors (Q, X, p, q0, QA, λ) ir definēts sekojoši:
         s_0            b             s_5                 0.045
         s_1            a             s_1                 0.9
         s_1            a             s_2                 0.1
+        s_1            b             s_1                 1
         s_2            a             s_2                 0.5
         s_2            a             s_5                 0.5
+        s_2            b             s_2                 1
+        s_3            a             s_3                 1
         s_3            b             s_3                 0.91
         s_3            b             s_4                 0.09
+        s_4            a             s_4                 1
         s_4            b             s_4                 0.95
         s_4            b             s_5                 0.05
+        s_5            a             s_5                 1
+        s_5            b             s_5                 1
