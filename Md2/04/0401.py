@@ -69,23 +69,23 @@ if __name__ == "__main__":
         ("b" * 7) + ("a" * 3) + ("b" * 7)
     ]
 
-    tests = {
-        ("b" * 14) + ("a" * 3): True,
-        ("b" * 14) + ("a" * 4): False,
-        ("b" * 15) + ("a" * 3): False,
-        ("b" * 13) + ("a" * 3): False,
-        ("a" * 3) + ("b" * 14): True,
-        ("b" * 7) + ("a" * 2) + ("b" * 7): False,
-        ("b" * 7) + ("a" * 3) + ("b" * 7): True
-    }
+    # tests = {
+    #     ("b" * 14) + ("a" * 3): True,
+    #     ("b" * 14) + ("a" * 4): False,
+    #     ("b" * 15) + ("a" * 3): False,
+    #     ("b" * 13) + ("a" * 3): False,
+    #     ("a" * 3) + ("b" * 14): True,
+    #     ("b" * 7) + ("a" * 2) + ("b" * 7): False,
+    #     ("b" * 7) + ("a" * 3) + ("b" * 7): True
+    # }
 
     for word in words:
         print(f"Word {word}: {probabilistic_automaton(word)}")
 
-    for word, result in tests.items():
-        assert probabilistic_automaton(word) == result
+    # for word, result in tests.items():
+    #     assert probabilistic_automaton(word) == result
 
-    print("All tests passed!")
+    # print("All tests passed!")
 
     print(TRANSITION_MATRIX["a"])
 

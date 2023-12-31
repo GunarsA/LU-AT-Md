@@ -12,27 +12,27 @@ Akceptors ar magazīna tipa atmiņu (Q, X, S, δ, q0, $, QA) ir definēts sekojo
     s_0              0              Z              s_1                    Z
     s_0              0              0              s_1                    0
     s_0              0              1              s_1                    1
-    s_0              1              Z              s_0                    0Z
+    s_0              1              Z              s_0                    Z
     s_0              1              0              s_0                    0
     s_0              1              1              s_0                    1
     s_1              ε              0              s_4                    ε
     s_1              0              Z              s_2                    Z
     s_1              0              0              s_2                    0
     s_1              0              1              s_2                    1
-    s_1              1              Z              s_3                    0Z
+    s_1              1              Z              s_3                    Z
     s_1              1              0              s_3                    0
     s_1              1              1              s_3                    1
     s_2              ε              0              s_4                    ε
-    s_2              0              Z              s_1                   1Z
-    s_2              0              0              s_1                    ε
-    s_2              0              1              s_1                   11
-    s_2              1              Z              s_0                    Z
-    s_2              1              0              s_0                    0
-    s_2              1              1              s_0                    1
+    s_2              0              Z              s_2                   0Z
+    s_2              0              0              s_2                   00
+    s_2              0              1              s_2                    ε
+    s_2              1              Z              s_3                    Z
+    s_2              1              0              s_3                    0
+    s_2              1              1              s_3                    1
     s_3              ε              0              s_4                    ε
-    s_3              0              Z              s_3                   0Z
-    s_3              0              0              s_3                   00
-    s_3              0              1              s_3                    ε
-    s_3              1              Z              s_2                    Z
-    s_3              1              0              s_2                    0
-    s_3              1              1              s_2                    1
+    s_3              0              Z              s_1                   1Z
+    s_3              0              0              s_1                    ε
+    s_3              0              1              s_1                   11
+    s_3              1              Z              s_0                    Z
+    s_3              1              0              s_0                    0
+    s_3              1              1              s_0                    1
